@@ -1,3 +1,5 @@
+import { ObjectId } from 'mongodb'
+import db from './db.js'
 // app.js
 const express = require('express');
 const mongoose = require('mongoose');
@@ -7,6 +9,7 @@ const userRoutes = require('./routes/users');
 const designRoutes = require('./routes/designs');
 const commentRoutes = require('./routes/comments');
 require('dotenv').config();
+
 
 const app = express();
 app.use(bodyParser.json());

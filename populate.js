@@ -2,7 +2,9 @@
 const mongoose = require('mongoose');
 const Comment = require('./models/comment');
 const User = require('./models/user');
-const Sneaker = require('./models/sneaker'); 
+const Sneaker = require('./models/sneaker');
+const Design = require('./models/design');  
+const Post = require('./comtroller/post'); 
 require('dotenv').config();
 
 
@@ -23,32 +25,32 @@ async function seedDatabase() {
   ];
 
   const sneakers = [
-    { name: 'Air Max', brand: 'Nike', color: 'blue', size: 9, price: 250 },
-    { name: 'Yeezy 350', brand: 'Adidas', color: 'white', size: 8, price: 280 },
-    { name: 'Air Force 1', brand: 'Nike', color: 'black', size: 10, price: 300 },
-    { name: 'Yeezy', brand: 'Adidas', color: 'black', size: 10, price: 300 },
-    { name: 'Jordan', brand: 'Jordan', color: 'black', size: 10, price: 300 },
-    { name: 'Puma', brand: 'Puma', color: 'black', size: 10, price: 300 },
-    { name: 'Reebok', brand: 'Reebok', color: 'black', size: 10, price: 300 },
+    { name: 'Air Max', brand: 'Nike', color: 'blue', size: 9, price: 250, sneakerId: '123' },
+    { name: 'Yeezy 350', brand: 'Adidas', color: 'white', size: 8, price: 280,  sneakerId: '258' },
+    { name: 'Air Force 1', brand: 'Nike', color: 'black', size: 10, price: 300, sneakerId : '369' },
+    { name: 'Yeezy', brand: 'Adidas', color: 'black', size: 10, price: 300,  sneakerId : '258' },
+    { name: 'Jordan', brand: 'Jordan', color: 'black', size: 10, price: 300,  sneakerId : '248' },
+    { name: 'Puma', brand: 'Puma', color: 'black', size: 10, price: 300, sneakerId : '238' },
+    { name: 'Reebok', brand: 'Reebok', color: 'black', size: 10, price: 300,sneakerId : '228' },
   ];
 
   const comments = [
-    { userId: 1,sneakerId: S1, content: 'Love these shoes!',  },
-    { userId: 2,sneakerId: S2, content: 'I love these shoes!',  },
-    { userId: 3,sneakerId: S3, content: 'I really love these shoes!',  },
-    { userId: 4,sneakerId: S4, content: 'I just love these shoes!',  },
-    { userId: 5,sneakerId: S5, content: 'I love these shoes!',  },
-    { userId: 6,sneakerId: S6, content: 'I really love these shoes!',  },
-    { userId: 7,sneakerId: S7, content: 'I just love these shoes!',  },       
+    { userId: 1,sneakerId: null, content: 'Love these shoes!',  },
+    { userId: 2,sneakerId: null, content: 'I love these shoes!',  },
+    { userId: 3,sneakerId: null, content: 'I really love these shoes!',  },
+    { userId: 4,sneakerId: null, content: 'I just love these shoes!',  },
+    { userId: 5,sneakerId: null, content: 'I love these shoes!',  },
+    { userId: 6,sneakerId: null, content: 'I really love these shoes!',  },
+    { userId: 7,sneakerId: null, content: 'I just love these shoes!',  },       
    
   ];
     const designs = [
-      { sneakerId:'S1', designName:'PinkDrgon', pattern: 'solid', colorScheme:'pink', } ,
-      { sneakerId:'S2', designName:'BlueDrgon', pattern: 'solid', colorScheme:'blue', } ,
-      { sneakerId:'S3', designName:'GreenDrgon', pattern: 'solid', colorScheme:'green', } ,
-      { sneakerId:'S4',designName:'BlackDrgon', pattern: 'solid', colorScheme:'black', } ,
-      { sneakerId:'S5', designName:'WhiteDrgon', pattern: 'solid', colorScheme:'white', } ,
-      { sneakerId:'S6', designName:'PurpleDrgon', pattern: 'solid', colorScheme:'purple', } ,
+      { userId:'1', designName:'PinkDrgon', pattern: 'solid', colorScheme:'pink', } ,
+      { userId:'2', designName:'BlueDrgon', pattern: 'solid', colorScheme:'blue', } ,
+      { userId:'3', designName:'GreenDrgon', pattern: 'solid', colorScheme:'green', } ,
+      { userId:'4',designName:'BlackDrgon', pattern: 'solid', colorScheme:'black', } ,
+      {userId:'5', designName:'WhiteDrgon', pattern: 'solid', colorScheme:'white', } ,
+      {userId:'6', designName:'PurpleDrgon', pattern: 'solid', colorScheme:'purple', } ,
      
   ];
 

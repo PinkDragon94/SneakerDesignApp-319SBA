@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const designSchema = new mongoose.Schema({
-  sneakerId: { type: mongoose.Schema.Types.ObjectId, ref: 'Sneaker', required: true },
+  UserId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   designName: { type: String, required: true },
   pattern: { type: String, required: true },
   colorScheme: { type: [String], required: true },
