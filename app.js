@@ -1,5 +1,5 @@
-import { ObjectId } from 'mongodb'
-import db from './db.js'
+// import { ObjectId } from 'mongodb'
+// import db from './db.js'
 // app.js
 const express = require('express');
 const mongoose = require('mongoose');
@@ -26,5 +26,7 @@ mongoose.connect(process.env.DB_URI,)
     console.log('MongoDB connected')
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 }
+
+
 )
   .catch(err => console.error(err,'mongodb connection error'));

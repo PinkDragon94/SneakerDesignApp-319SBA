@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import "dotenv/config";
 import { ObjectId } from "mongodb";
-import post from "./controllers/post.js";
+
 const connection = process.env.MONGO_DB_KEY;
 
 const client = new MongoClient(connection);
