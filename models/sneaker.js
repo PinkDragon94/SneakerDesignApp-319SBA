@@ -7,6 +7,7 @@ const sneakerSchema = new mongoose.Schema({
   color: { type: String, required: true },
   size: { type: Number, required: true },
   price: { type: Number, required: true },
+  sneakerId: { type: Number, required: true },
 });
 
 sneakerSchema.index({ name: 1, brand: 1 }); // Example index

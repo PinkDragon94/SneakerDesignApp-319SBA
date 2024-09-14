@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 import "dotenv/config";
 import { ObjectId } from "mongodb";
 
-const connection = process.env.MONGO_DB_KEY;
+const connection = process.env.DB_URI;
 
 const client = new MongoClient(connection);
 let conn;  
